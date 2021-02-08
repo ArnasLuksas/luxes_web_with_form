@@ -1,0 +1,160 @@
+@import "main";
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.mediniai_content {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2em;
+  max-width: 350px;
+  border-radius: 1em;
+  background: #fff;
+  box-shadow: 0px 5px 5px #e1dee6, -5px -5px 5px #ffffff;
+  .mediniai_para {
+    padding: 2em;
+  }
+  .mediniai_description .mediniai_title_desk {
+    display: none;
+  }
+  p {
+    font-size: 16px;
+    color: $para-color;
+  }
+
+  .mediniai_title {
+    font-size: 18px;
+    color: $title-color;
+    padding: 2em 1em 2em 1em;
+  }
+
+  .part_one_desk {
+    display: none;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .mediniai_title {
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    max-width: 350px;
+    font-weight: 400;
+    margin: 1em auto;
+    color: $title-color;
+  }
+  .mediniai_image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .wood_big {
+    display: none;
+  }
+  .wood_small {
+    padding: 0 0;
+    height: 231px;
+  }
+}
+
+@media (min-width: 828px) {
+  .mediniai_content {
+    max-width: 927px;
+    .mediniai_title {
+      max-width: 400px;
+      padding: 1em 0em 1em 0em;
+      line-height: 1.7em;
+    }
+    .mediniai_description {
+      display: block;
+      .mediniai_para {
+        padding: 0 2em 2em 2em;
+      }
+      .mediniai_image {
+        float: right;
+        width: 50%;
+        margin: 0em 2em 2em 2em;
+        .wood_big {
+          display: block;
+          padding: 0 0;
+        }
+        .wood_small {
+          padding: 0 0;
+          height: 231px;
+          display: none;
+        }
+      }
+
+      .wood_small {
+        padding-top: 1em;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  main {
+    padding-top: 4em;
+  }
+  .mediniai_title {
+    display: none;
+  }
+
+  .mediniai_container {
+    max-width: 1440px;
+    margin-bottom: 4em;
+    .mediniai_content {
+      max-width: 1440px;
+    }
+  }
+  .mediniai_content .mediniai_description {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-areas:
+      "title image"
+      "para image";
+
+    .mediniai_title_desk {
+      display: flex;
+      grid-area: title;
+      color: $title-color;
+      text-align: center;
+      text-transform: uppercase;
+      margin: 4em 0 -3em 0;
+    }
+    .mediniai_image {
+      grid-area: image;
+      width: 583px;
+      height: 750px;
+      margin-bottom: 0;
+
+      .wood_big {
+        margin: 0 0 0 4em;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        padding-top: 0;
+        border-top-right-radius: 1em;
+        border-bottom-right-radius: 1em;
+      }
+    }
+
+    .mediniai_para {
+      width: unset;
+      grid-area: para;
+
+      max-width: 550px;
+      margin-bottom: 8em;
+      span {
+        color: $title-color;
+      }
+    }
+  }
+}

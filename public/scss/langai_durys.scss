@@ -1,0 +1,192 @@
+@import "main";
+
+.langaiDurys_about {
+  display: none;
+}
+
+.langai_durys_contrainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.langaiDurys_content {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2em;
+  max-width: 350px;
+  border-radius: 1em;
+  background: #fff;
+  box-shadow: 0px 5px 5px #e1dee6, -5px -5px 5px #ffffff;
+
+  .langaiDurys_services > div:hover,
+  .langaiDurys_services > .door:hover {
+    transform: scale(1.03);
+    transition: 300ms ease-in;
+  }
+}
+.langaiDurys_description,
+.langaiDurys_services {
+  max-width: 350px;
+  margin: 0 auto;
+}
+// .langaiDurys_services
+
+.langaiDurys_services > div {
+  text-align: center;
+  transition: 300ms ease-out;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  img {
+    max-width: 300px;
+  }
+}
+.langaiDurys_description p {
+  font-size: 18px;
+  text-align: center;
+  padding: 1em 2em;
+  text-transform: uppercase;
+}
+
+.langaiDurys_title {
+  font-size: 16px;
+  padding-top: 1em;
+  letter-spacing: 0.1em;
+  color: $title-color;
+  text-transform: uppercase;
+}
+
+.langaiDurys_image {
+  display: none;
+}
+
+.langaiDurys_description span {
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+.langaiDurys_services .wooden {
+  max-width: 260px;
+  padding: 0 2em;
+  height: 207px;
+}
+.langaiDurys_services .aluminium {
+  max-width: 260px;
+  padding: 0 2em;
+  height: 207px;
+}
+.langaiDurys_services .plastic {
+  max-width: 260px;
+  padding: 0 2em;
+}
+
+.langaiDurys_services .door {
+  height: 450px;
+  transition: 300ms ease-out;
+  padding-bottom: 3em;
+
+  max-width: 260px;
+  padding: 0 2em 3em 2em;
+}
+
+@media (min-width: 828px) {
+  main {
+    align-items: unset;
+  }
+  .langaiDurys_content {
+    display: flex;
+    flex-direction: column;
+    max-width: 927px;
+    width: 100%;
+  }
+  .langaiDurys_services {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: unset;
+  }
+
+  .langaiDurys_services .wooden {
+    width: 260px;
+    padding: 0 2em;
+    height: 207px;
+  }
+  .langaiDurys_services .aluminium {
+    width: 260px;
+    padding: 0 2em;
+    height: 207px;
+  }
+  .langaiDurys_services .plastic {
+    width: 260px;
+    padding: 0 2em;
+    height: 207px;
+  }
+
+  .langaiDurys_services .door {
+    height: 450px;
+    transition: 300ms ease-out;
+    padding-bottom: 3em;
+
+    width: 260px;
+    padding: 0 2em 3em 2em;
+  }
+}
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+  .langai_durys_contrainer {
+    display: flex;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 2em;
+  }
+  .langaiDurys_content {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 0em 6em 0em;
+    align-content: center;
+  }
+  main {
+    padding: 6em 0 0 0;
+  }
+  .langaiDurys_content {
+    .langaiDurys_services {
+      margin: 2em 1em 2em 1em;
+      display: flex;
+      flex-direction: row;
+      .plastic,
+      .wooden,
+      .aluminium {
+        padding: 0 0;
+        height: 277px;
+      }
+    }
+  }
+  .langaiDurys_services > div img {
+    height: 270px;
+  }
+  .langaiDurys_description,
+  .langaiDurys_services {
+    max-width: unset;
+  }
+  .langaiDurys_services div {
+    margin: 2em 4em 0em 4em;
+  }
+  .langaiDurys_services .door {
+    padding: 0;
+    height: 555px;
+    margin-bottom: 4em;
+  }
+  .langaiDurys_description p {
+    line-height: 1.5em;
+    font-size: 18px;
+    padding-top: 2em;
+    width: 650px;
+  }
+
+  .langaiDurys_content .langaiDurys_title {
+    font-size: 18px;
+    padding-top: 0em;
+  }
+}

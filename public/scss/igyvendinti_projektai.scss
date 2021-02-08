@@ -1,0 +1,82 @@
+@import "main";
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.projects_gallery {
+  display: flex;
+  margin: 2em;
+  max-width: 350px;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: 1em;
+  background: #fff;
+  box-shadow: 0px 5px 5px #e1dee6, -5px -5px 5px #ffffff;
+  .title {
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 1em 1em 0em 1em;
+    color: $title-color;
+  }
+  .object p {
+    height: 20px;
+    margin: -2em 2em 2em 1em;
+    color: $title-color;
+  }
+}
+.gallery > div > img {
+  width: 100%;
+  padding: 0em 1em 2em 1em;
+}
+@media (min-width: 828px) {
+  .projects_gallery {
+    max-width: 927px;
+    .projects .title {
+      padding: 1em;
+    }
+  }
+  .gallery {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    .object {
+      width: 350px;
+      margin: 0;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+  main {
+    padding: 3em 0 0 0;
+    .contacts_info {
+      width: 100%;
+    }
+    .igyvendinti_projektai_container {
+      display: flex;
+    }
+  }
+  .projects_gallery {
+    max-width: 1440px;
+    width: 100%;
+    margin: 1em 0em 6em 0em;
+    background-color: unset;
+    padding: 2em;
+    .projects .title {
+      padding: 3em 1em;
+    }
+    .projects .gallery {
+      margin: 0 0 2em 0;
+    }
+  }
+}

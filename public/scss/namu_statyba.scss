@@ -1,0 +1,115 @@
+@import "main";
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.statyba_content {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2em;
+  max-width: 350px;
+  border-radius: 1em;
+  background: #fff;
+  box-shadow: 0px 5px 5px #e1dee6, -5px -5px 5px #ffffff;
+
+  p {
+    font-size: 16px;
+    color: $para-color;
+  }
+
+  .statyba_title {
+    font-size: 16px;
+    color: $title-color;
+    margin-top: -1em;
+  }
+  .statyba_image {
+    display: none;
+  }
+}
+
+.statyba_description,
+.statyba_services {
+  max-width: 350px;
+  padding: 1em 2em 2em 2em;
+  ul {
+    color: $para-color;
+  }
+}
+.statyba_image {
+  display: none;
+}
+@media (min-width: 828px) {
+  main {
+    align-items: unset;
+  }
+  .statyba_content {
+    max-width: 927px;
+    justify-content: center;
+  }
+  .statyba_description,
+  .statyba_services {
+    max-width: 380px;
+    padding: 1em 2em 2em 2em;
+    line-height: 1.7em;
+  }
+  .statyba_services .statyba_title {
+    margin-top: 1em;
+  }
+}
+@media (min-width: 992px) {
+  .statyba_content {
+    margin: 2em auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .statyba_contrainer {
+    display: flex;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .statyba_content {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 2em 6em 2em;
+    justify-items: center;
+
+    .statyba_image {
+      display: flex;
+      justify-content: flex-end;
+    }
+    img {
+      width: 583px;
+      max-height: 750px;
+
+      border-top-right-radius: 1em;
+      border-bottom-right-radius: 1em;
+    }
+  }
+  .statyba_description {
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    padding: 4em 4em 0 3em;
+  }
+  .statyba_image {
+    width: 100%;
+  }
+
+  .statyba_services {
+    margin-top: -450px;
+    margin-left: -6.5em;
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    padding: 1em 4em 0 3em;
+  }
+}

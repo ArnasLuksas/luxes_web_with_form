@@ -1,0 +1,19 @@
+{
+  "name": "nodecontactform",
+  "version": "1.0.0",
+  "description": "app using nodemailer",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Arnas Luksas",
+  "license": "MIT",
+  "dependencies": {
+    "basic-ftp": "^4.6.3",
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "nodemailer": "^6.4.17"
+  }
+}

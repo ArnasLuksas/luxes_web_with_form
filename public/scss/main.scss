@@ -1,0 +1,684 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+$title-color: #303850;
+$content-color: #afb7cf;
+$para-color: #6c7693;
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  min-height: 100%;
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: #faf7ff;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  img {
+    width: 100%;
+  }
+}
+// navigation container--------------------------------------------
+.nav-container {
+  background: #fff;
+}
+.list {
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  li {
+    padding: 1.5em 0 0 0;
+    font-size: 1.5em;
+    text-align: center;
+    a {
+      color: $title-color;
+    }
+  }
+}
+nav .open {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+// header--------------------------------------------
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+
+  ul {
+    display: none;
+  }
+  a svg {
+    height: 3.2em;
+    width: 4em;
+  }
+
+  header nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    background: #123;
+  }
+  .nav-burger {
+    cursor: pointer;
+    position: relative;
+    z-index: 111;
+  }
+  .line {
+    content: " ";
+    border: 3px solid black;
+    line-height: 1px;
+    padding: 0;
+    margin: 6px 0;
+    width: 3em;
+  }
+}
+
+// welcome section ----------------------------------
+.welcome {
+  position: relative;
+
+  img {
+    max-height: 600px;
+  }
+  p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: (translate(-50%, -80%));
+    width: 80%;
+    max-width: 400px;
+    color: white;
+    font-size: 1.5em;
+    padding: 1em 0em;
+    text-align: center;
+    border: 1px solid white;
+    backdrop-filter: brightness(25%);
+  }
+}
+
+// main ---------------------------------
+
+.construction {
+  margin-top: 4em;
+}
+
+.tablet {
+  display: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  a {
+    width: 100%;
+    max-width: 350px;
+    margin: 0em 2em 0em 2em;
+  }
+}
+.construction,
+.doorsWindows,
+.realEstate,
+.contacts_info,
+.construction_tablet,
+.doorsWindows_tablet,
+.realEstate_tablet,
+.contacts_tablet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3em 2em;
+  margin: 2em 0;
+  text-align: center;
+  border-radius: 1em;
+  background: #fff;
+  box-shadow: 0px 5px 5px #e1dee6, -5px -5px 5px #ffffff;
+  cursor: pointer;
+  transition-duration: 0.4s;
+
+  .arrow {
+    width: 2em;
+  }
+  svg {
+    width: 5em;
+    fill: $title-color;
+  }
+
+  p {
+    font-size: 1.5em;
+    color: $title-color;
+  }
+  .content {
+    display: none;
+  }
+}
+
+.contacts_tablet {
+  transition: 300ms ease-out;
+}
+.contacts_tablet:hover {
+  transform: scale(1.03);
+  transition: 300ms ease-in;
+  box-shadow: 0px 5px 5px #c6c6c6, -5px -5px 5px #ffffff;
+}
+
+.construction:hover,
+.doorsWindows:hover,
+.realEstate:hover,
+// .contacts_info:hover,
+.construction_tablet:hover,
+.doorsWindows_tablet:hover,
+.realEstate_tablet:hover {
+  box-shadow: 0px 5px 5px #c6c6c6, -5px -5px 5px #ffffff;
+  transform: scale(1.03);
+  transition: 300ms ease-in;
+}
+.info .address {
+  margin: 0 0 2em 0;
+}
+
+.projects_gallery {
+  display: none;
+}
+.object {
+  margin: 1em;
+  cursor: pointer;
+  transition: 300ms ease-out;
+  img {
+    height: 290px;
+    width: 350px;
+  }
+}
+.object:hover {
+  transform: scale(1.03);
+  transition: 300ms ease-in;
+}
+//image-modal-popup
+.image-modal-popup {
+  position: fixed;
+  overflow: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  animation: 500ms fadeIn;
+  display: none;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.image-modal-popup .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 30px;
+  position: relative;
+}
+.image-modal-popup .description {
+  text-align: center;
+}
+.image-modal-popup img {
+  width: 80%;
+  max-height: calc(100vh - 150px);
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.image-modal-popup span {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 4rem;
+  color: #faf7ff;
+  cursor: pointer;
+}
+
+//nebutina
+.image-modal-popup p {
+  margin: 5px auto;
+  font-size: 1.1rem;
+}
+.image-modal-popup a {
+  margin-bottom: 5px;
+  display: inline-block;
+  color: #222;
+  font-weight: 500;
+  text-decoration: none;
+  background: #fff;
+  margin: 10px 10px;
+  padding: 10px 15px;
+  border-radius: 6px;
+}
+main .contacts_info {
+  display: none;
+}
+
+// main end  -----------------------------------------------------
+
+.contacts_info {
+  align-items: flex-start;
+  .contacts {
+    width: 100%;
+    cursor: auto;
+  }
+}
+.contacts_info:hover {
+  box-shadow: 0px 5px 5px #e1dee6, -5px -5px 5px #ffffff;
+}
+form {
+  width: 100%;
+  margin-bottom: 2em;
+  text-align: left;
+  label,
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    color: $title-color;
+    background-color: $content-color;
+    border: none;
+    outline: none;
+    padding: 0.3em;
+    transition-duration: 0.4s;
+  }
+
+  input:focus,
+  textarea:focus {
+    background-color: $title-color;
+    color: $content-color;
+  }
+}
+button {
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  font-size: 16px;
+  display: inline-block;
+  background-color: $title-color;
+  border: none;
+  color: $content-color;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+button:hover {
+  background-color: $content-color;
+  color: $title-color;
+}
+.contacts_info .content {
+  display: none;
+}
+.content.visible {
+  display: block;
+}
+
+//footer ----------------------------------------------
+footer {
+  text-align: center;
+  padding: 0.5em;
+  color: $title-color;
+
+  a {
+    color: $title-color;
+
+    text-decoration: underline;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) {  }
+
+// Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) {
+
+.our_services {
+  display: none;
+}
+.contacts_info {
+  display: flex;
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  // header ---------------------------------------------------------------
+  header {
+    ul {
+      display: flex;
+      font-size: 1.1em;
+      padding: 1em 2em;
+    }
+    .list {
+      position: unset;
+      li {
+        padding: unset;
+        font-size: unset;
+        padding-left: 2em;
+      }
+    }
+  }
+
+  .nav-burger {
+    display: none;
+  }
+  //navigatin underline effect
+  .list a {
+    background-image: linear-gradient($title-color);
+    background-size: 0% 0.1em;
+    background-position-y: 100%;
+    background-position-x: 0%;
+    background-repeat: no-repeat;
+    transition: background-size 0.2s ease-in-out;
+    text-decoration: none;
+    color: $title-color;
+  }
+
+  .list a:hover,
+  .list a:focus,
+  .list a:active {
+    background-size: 100% 0.1em;
+  }
+
+  // welcome section  -----------------------------------------------------
+  .welcome {
+    p {
+      width: 90%;
+      max-width: 650px;
+    }
+  }
+  // tablet  -----------------------------------------------------
+
+  .arrow {
+    width: 2em;
+    fill: $title-color;
+  }
+  .arrow_bottom {
+    display: none;
+  }
+
+  svg {
+    width: 5em;
+    // fill: #272a35;
+  }
+
+  // main -----------------------------------------------------
+  .contacts {
+    .info {
+      flex-direction: column;
+      // width: 60%;
+      p {
+        width: 300px;
+      }
+      form {
+        padding: 0em 2em 2em 2em;
+        label:nth-child(1) {
+          margin-top: 0;
+        }
+      }
+    }
+    .info.main {
+      flex-direction: column;
+      width: unset;
+      p {
+        width: unset;
+      }
+      form {
+        label:nth-child(1) {
+          margin-top: 0;
+        }
+      }
+    }
+
+    .welcome-contacts {
+      height: 390px;
+      overflow: hidden;
+    }
+  }
+
+  // Extra large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) {
+    // header ---------------------------------------------------------------
+    .construction,
+    .doorsWindows,
+    .realEstate {
+      width: unset;
+    }
+    .construction,
+    .doorsWindows,
+    .realEstate,
+    .contacts_info {
+      display: block;
+    }
+
+    header {
+      margin: 0 auto;
+      max-width: 1370px;
+    }
+
+    // welcome section  -----------------------------------------------------
+
+    .welcome {
+      height: 700px;
+      overflow: hidden;
+
+      img {
+        max-height: 900px;
+        position: relative;
+        bottom: 50px;
+      }
+
+      p {
+        font-size: 3.2em;
+        letter-spacing: 0.05em;
+        padding: 1em 0;
+        max-width: 900px;
+        transform: translate(-50%, -80%);
+      }
+    }
+    .welcome-contacts {
+      height: 350px;
+
+      .img-contact {
+        bottom: 460px;
+      }
+    }
+    .tablet {
+      display: none;
+    }
+    // main start-----------------------------------------------------
+
+    main {
+      padding: 6em 0 0 0;
+      margin: 0 auto;
+    }
+    // services-----------------------------------------------------
+
+    .our_services {
+      display: flex;
+      max-width: 1440px;
+      margin: 0 auto;
+      justify-content: center;
+      flex-direction: row;
+      a {
+        margin: 0 2em;
+        width: 350px;
+      }
+    }
+
+    .construction {
+      margin: unset;
+    }
+    .doorsWindows {
+      margin: unset;
+    }
+    .realEstate {
+      margin: unset;
+    }
+    .construction,
+    .doorsWindows,
+    .realEstate,
+    .projects_gallery {
+      .title {
+        text-align: center;
+        font-size: 1.7em;
+        color: $title-color;
+        padding: 1em 0 1em 0;
+        margin: unset;
+      }
+    }
+    .construction .content,
+    .doorsWindows .content,
+    .realEstate .content,
+    .contacts_info .content {
+      display: flex;
+      justify-content: center;
+      .arrow_bottom {
+        width: 2em;
+      }
+    }
+    // contacts-----------------------------------------------------
+
+    main .contacts_info {
+      display: flex;
+
+      background-color: $title-color;
+      cursor: unset;
+
+      border-radius: unset;
+      width: 100%;
+      margin: 0;
+
+      .contacts {
+        display: flex;
+        justify-content: flex-end;
+        max-width: 1440px;
+        margin: 0 auto;
+        .content {
+          justify-content: flex-start;
+        }
+      }
+    }
+
+    .info {
+      display: flex;
+      justify-content: flex-start;
+      .address {
+        text-align: left;
+      }
+
+      .address span,
+      .bank span {
+        font-size: 1.7em;
+        display: inline-block;
+        padding-bottom: 0.5em;
+        padding-left: 1.1em;
+        letter-spacing: 0.05em;
+        color: $content-color;
+      }
+      p {
+        line-height: 30px;
+        text-align: left;
+        font-size: 16px;
+        padding: 0 2em;
+        margin: 0;
+        width: 330px;
+      }
+      .light-color {
+        color: $content-color;
+      }
+    }
+
+    .contacts_info {
+      box-shadow: unset;
+    }
+    .contacts_info:hover {
+      box-shadow: unset;
+    }
+
+    .contacts_img {
+      display: none;
+    }
+
+    .info_img {
+      display: none;
+    }
+    .arrow {
+      display: none;
+    }
+    .arrow_bottom {
+      width: 2em;
+      display: flex;
+      justify-content: center;
+    }
+
+    // projects section gallery--------------------------------------------
+
+    .projects_gallery {
+      display: block;
+      padding: 2em 0 4em 0;
+      width: 100%;
+      margin: 6em 0 0 0;
+      background-color: $content-color;
+    }
+
+    .projects {
+      max-width: 1440px;
+      width: 100%;
+      margin: 0 auto;
+      margin-top: 0em;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .object p {
+        margin-top: 0;
+        color: $title-color;
+      }
+    }
+
+    form label {
+      background: #faf7ff;
+    }
+
+    // main end-----------------------------------------------------
+
+    footer {
+      padding: 0em 0 0 0;
+      background-color: $title-color;
+      letter-spacing: 0.05em;
+      color: $content-color;
+
+      a {
+        letter-spacing: 0.05em;
+        color: $content-color;
+      }
+    }
+  }
+}
